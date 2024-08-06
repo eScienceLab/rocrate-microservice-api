@@ -1,0 +1,75 @@
+{
+    "openapi":"3.0.3",
+    "info": {
+      "title":"Cratey API",
+      "version":"0.1.0"
+    },
+    "servers": [
+      {"url":"https://api.server.test/v1"}
+    ],
+    "components": {
+        "securitySchemes": {
+            "myAPIKey": {
+                "type": "apiKey",
+                "name": "api_key",
+                "in": "query"
+            }
+        }
+    },
+    "paths": {
+        "/ro-crates": {
+            "get": {
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "put": {
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/ro-crates/{id}": {
+            "get": {
+                "description": "Return the crate with the given id",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "delete": {
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        {
+            "myAPIKey": []
+        }
+    ]
+  }

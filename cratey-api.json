@@ -19,16 +19,29 @@
     "paths": {
         "/ro-crates": {
             "get": {
-                "description": "",
+                "description": "Return a list of all crates",
                 "parameters": [],
                 "responses": {
                     "200": {
                         "description": "OK"
                     }
                 }
-            },
-            "put": {
-                "description": "",
+            }
+        },
+        "/ro-crates:create_from_tes": {
+            "post": {
+                "description": "Create a new crate with the given TES package",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/ro-crates:create": {
+            "post": {
+                "description": "Create a new crate with the given information",
                 "parameters": [],
                 "responses": {
                     "200": {
@@ -39,7 +52,7 @@
         },
         "/ro-crates/{id}": {
             "get": {
-                "description": "Return the crate with the given id",
+                "description": "Return the crate with the given ID",
                 "parameters": [],
                 "responses": {
                     "200": {
@@ -47,8 +60,8 @@
                     }
                 }
             },
-            "post": {
-                "description": "",
+            "put": {
+                "description": "Store a given crate with the given ID",
                 "parameters": [],
                 "responses": {
                     "200": {
@@ -57,7 +70,29 @@
                 }
             },
             "delete": {
-                "description": "",
+                "description": "Delete a crate with the given ID",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/ro-crates/{id}:add_files": {
+            "post": {
+                "description": "Add given files to the crate with the given ID",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/ro-crates/{id}:add_crate": {
+            "post": {
+                "description": "Add another crate to the crate with the given ID",
                 "parameters": [],
                 "responses": {
                     "200": {
